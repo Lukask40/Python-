@@ -1,11 +1,14 @@
 import os 
 os.system("cls")
 
-numero = int(input("Digite o número: "))
+idade = int(input("Digite a idade; "))
 
-if numero > 10:
-    print("É MAIOR QUE 10.")
-elif numero == 10:
-    print ("O NÚMERO É IGUAL A 10.")
+if idade < 16:
+    print("Não podem votar")
+elif idade < 18:
+    print("Voto opcional")
+elif idade <= 65:
+    print("Voto obrigatório")
 else:
-    print("O NÚMERO É MENOR QUE 10")       
+    print("Não são obrigados a votar")
+

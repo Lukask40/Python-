@@ -1,16 +1,31 @@
 import os 
 os.system("cls")
 
-nota1 = float(input("Digite a primeira nota: "))
-nota2 = float(input("Digite a segunda nota: "))
-nota3 = float(input("Digite a terceira nota: "))
+nome = input("Digite seu nome: ")
+nota1 = int(input("Digite a mota 1: "))
+nota2 = int(input("Digite a nota 2: "))
 
-media = (nota1 + nota2 + nota3) / 3
+soma = nota1  + nota2
+media = soma / 2 
 
-if media < 7:
-    status = "Reprovado"
+if media > 9:
+    conceito = "A"
+elif media > 7.5:
+    conceito = "B"
+elif media > 6: 
+    conceito = "C"
+elif media > 4:
+    conceito = "D"
 else:
-    status = "Aprovado"
+    conceito = "E"
 
-print(f"Média: {media:.2f}")
-print(f"Situação: {status}")
+if conceito in ["A", "B","C"]:
+    status = "Aprovado"
+else:
+    status = "Reprovado"
+
+
+print(f"Aluno: {nome}")
+print(f"Media: {media}")
+print(f"Conceito: {conceito}")
+print(f"Status: {status}")
