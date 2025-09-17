@@ -9,13 +9,15 @@ soma = 0
 for i in range(QUANTIDADES_NOTAS):
     while True:
       nota = int(input (f"Digite a {i+1}º nota: "))
-      if nota >= 0 and nota <= 10:
+      if nota <= 0 or nota > 10:
+       print("A nota está invalida")
          break
     soma = soma + nota
 
 media = soma / QUANTIDADES_NOTAS
 
 print(f"Média: {media}")
+
 
 
 
